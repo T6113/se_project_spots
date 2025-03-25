@@ -4,7 +4,7 @@
 
 .card__title {
   margin: 0;
-  max-width: 119px;
+  max-width: 353px;
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -18,13 +18,14 @@
 .card__image {
   height: 413px;
   width: 100%;
+  margin-bottom: 32px;
   object-fit: cover;
   display: block;
   border-radius: 8px;
 }
 
 .card__content {
-  gap: 12px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +38,8 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card__like-bttn:hover {
@@ -48,7 +51,11 @@
   .card__title {
     font-size: 16px;
     line-height: 1;
-    max-width: 95px;
+    max-width: 260px;
+  }
+
+  .card__content {
+    gap: 12px;
   }
 
   .card__image {
