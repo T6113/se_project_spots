@@ -1,19 +1,18 @@
 .card {
   max-width: 413px;
-  max-height: 445px;
 }
 
 .card__title {
   margin: 0;
-  font-family: Poppins;
+  max-width: 119px;
+  font-family: Poppins, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  display: -webkit-box;
+  color: #212121;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  text-wrap: nowrap;
 }
 
 .card__image {
@@ -25,7 +24,7 @@
 }
 
 .card__content {
-  margin-top: 8px;
+  gap: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,16 +39,24 @@
   opacity: 40%;
 }
 
-@media screen and (max-width: 627px) {
-  .card {
-    margin-bottom: 22px;
-  }
+.card__like-bttn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
 
-  .card__content {
-    margin-top: 12px;
+@media screen and (max-width: 627px) {
+  .card__title {
+    font-size: 16px;
+    line-height: 1;
+    max-width: 95px;
   }
 
   .card__image {
     height: 288px;
+  }
+
+  .card__like-bttn {
+    width: 20px;
+    height: 18px;
   }
 }

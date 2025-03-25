@@ -10,7 +10,9 @@
 
 .footer__content {
   margin: 0 auto;
-  font-family: Poppins;
+  color: #212121b2;
+  opacity: 70%;
+  font-family: Poppins, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;

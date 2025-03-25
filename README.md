@@ -16,11 +16,12 @@ This project is an image gallery, made so all the elements are responsive and di
 - CSS
 - Responsive Design
 - Grid
-- Flexbox
+- VS Code
+- Git Hub
 - Media Queries
 
 ## Deployment
 
 This webpage is deplyed to the Github Pages
 
--[Deployment Link]:
+Dive into my coding journey on GitHub: https://t6113.github.io/se_project_spots/
