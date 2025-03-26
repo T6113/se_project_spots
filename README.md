@@ -19,9 +19,10 @@ This project is an image gallery, made so all the elements are responsive and di
 - VS Code
 - Git Hub
 - Media Queries
+- Flexbox
 
 ## Deployment
 
-This webpage is deplyed to the Github Pages
+This webpage is deplyed to the Github Pages: https://t6113.github.io/se_project_spots/
 
-Dive into my coding journey on GitHub: https://t6113.github.io/se_project_spots/
+Dive into my "Sprint 3" final project journey: https://drive.google.com/file/d/1ZfzjlIPIC0FFf-79QqQlVlvMPuAUie9y/view?usp=sharing
