@@ -1,5 +1,6 @@
 .card {
   max-width: 413px;
+  position: relative;
 }
 
 .card__title {
@@ -23,6 +24,24 @@
   border-radius: 8px;
 }
 
+.card__delete-bttn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/delete.svg);
+  background-color: transparent;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card__delete-bttn:hover {
+  background-image: url(../images/deletered.svg);
+  cursor: pointer;
+}
+
 .card__content {
   margin-top: 12px;
   display: flex;
@@ -44,6 +63,16 @@
 .card__like-bttn:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.card__like-bttn_active {
+  background-image: url(../images/spots-avatar-and-card-images/Union.svg);
+  opacity: 1;
+}
+
+.card__like-bttn_active:hover {
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
