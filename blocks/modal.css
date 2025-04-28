@@ -133,6 +133,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
+  width: fit-content;
 }
 
 @media screen and (max-width: 627px) {
@@ -153,6 +154,7 @@
 
   .modal__close-btn {
     padding: 18px 32px;
+    position: relative;
   }
 
   .modal__image {
