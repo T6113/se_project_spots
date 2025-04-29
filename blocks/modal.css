@@ -153,8 +153,8 @@
   }
 
   .modal__close-btn {
-    padding: 18px 32px;
-    position: relative;
+    top: 12px;
+    right: 12px;
   }
 
   .modal__image {
