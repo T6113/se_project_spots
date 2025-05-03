@@ -20,6 +20,8 @@ This project is an image gallery, made so all the elements are responsive and di
 - Git Hub
 - Media Queries
 - Flexbox
+- JavaScript
+- Form Validation
 
 ## Deployment
 
