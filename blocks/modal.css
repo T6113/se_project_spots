@@ -70,15 +70,26 @@
 }
 
 .modal__label {
+  margin-bottom: 32px;
+  display: block;
   font-family: Poppins, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 110.00000000000001%;
   color: #212121b2;
 }
 
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  color: #ff0000b2;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Poppins, Helvetica, sans-serif;
+}
+
 .modal__input {
   display: block;
-  margin: 8px 0 32px;
+  margin: 8px 0 0;
   width: 100%;
   border-radius: 8px;
   color: #212121;
@@ -88,6 +99,10 @@
   line-height: 100%;
   box-sizing: border-box;
   border: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.modal__input_type_error {
+  border: 1px solid #ff000099;
 }
 
 .modal__label::placeholder {
@@ -107,6 +122,15 @@
   font-size: 16px;
   line-height: 100%;
   transition: 0.3s;
+}
+
+.modal__submit-btn:hover {
+  background-color: #212121cc;
+}
+
+.modal__submit-btn_disabled {
+  background-color: #212121;
+  opacity: 50%;
 }
 
 .modal__image {
