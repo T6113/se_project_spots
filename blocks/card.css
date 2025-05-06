@@ -24,6 +24,10 @@
   border-radius: 8px;
 }
 
+.card_image:hover {
+  cursor: pointer;
+}
+
 .card__delete-btn {
   width: 32px;
   height: 32px;

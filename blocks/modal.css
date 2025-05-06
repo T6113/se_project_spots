@@ -14,6 +14,10 @@
   padding: 10px;
 }
 
+.modal:hover {
+  cursor: pointer;
+}
+
 .modal_type_preview {
   padding: 0 16px;
 }
@@ -43,6 +47,10 @@
   background-size: 35px 35px;
   border: none;
   padding: 0;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
 }
 
 .modal__close-btn_type_preview {
@@ -126,11 +134,13 @@
 
 .modal__submit-btn:hover {
   background-color: #212121cc;
+  cursor: pointer;
 }
 
 .modal__submit-btn_disabled {
   background-color: #212121;
   opacity: 50%;
+  pointer-events: none;
 }
 
 .modal__image {

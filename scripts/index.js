@@ -92,10 +92,12 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -141,7 +143,7 @@ function handleNewPostSubmit(evt) {
   });
   cardsList.prepend(cardElement);
   newPostForm.reset();
-  toggleButtonState(newPostSubmitBtn, settings);
+  disableButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
 }
 
@@ -151,4 +153,21 @@ newPostForm.addEventListener("submit", handleNewPostSubmit);
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
+});
+
+const modalList = document.querySelectorAll(".modal");
+
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".modal_is-opened");
+    closeModal(activeModal);
+  }
+}
+
+modalList.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
 });
