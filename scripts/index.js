@@ -143,7 +143,7 @@ function handleNewPostSubmit(evt) {
   });
   cardsList.prepend(cardElement);
   newPostForm.reset();
-  disableButton(newPostSubmitBtn, settings);
+  disabledSubmitButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
 }
 
