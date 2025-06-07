@@ -143,6 +143,11 @@
   pointer-events: none;
 }
 
+.modal__submit-btn_delete {
+  display: flex;
+  background-color: #ff6565;
+}
+
 .modal__image {
   max-width: 80vw;
   max-height: 80vh;

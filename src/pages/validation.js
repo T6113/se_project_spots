@@ -1,12 +1,3 @@
-const settings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error",
-};
-
 const showInputError = (formEl, inputEl, errorMessage, settings) => {
   const errorMessageID = inputEl.id + "-error";
   const errorMessageEl = formEl.querySelector("#" + errorMessageID);
@@ -43,7 +34,7 @@ const toggleButtonState = (inputList, buttonEl, settings) => {
   }
 };
 
-const disabledSubmitButton = (buttonEl, settings) => {
+export const disabledSubmitButton = (buttonEl, settings) => {
   buttonEl.classList.add(settings.inactiveButtonClass);
   buttonEl.disabled = true;
 };
@@ -53,7 +44,7 @@ const enableButton = (buttonEl, settings) => {
   buttonEl.disabled = false;
 };
 
-const resetValidation = (formEl, inputList, settings) => {
+export const resetValidation = (formEl, inputList, settings) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, settings);
   });
@@ -73,11 +64,9 @@ const setEventListeners = (formEl, settings) => {
   });
 };
 
-const enableValidation = (settings) => {
+export const enableValidation = (settings) => {
   const formList = document.querySelectorAll(settings.formSelector);
   formList.forEach((formEl) => {
     setEventListeners(formEl, settings);
   });
 };
-
-enableValidation(settings);

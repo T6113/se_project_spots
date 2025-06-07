@@ -2,10 +2,35 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  height: 156px;
+}
+
+.profile__avatar-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.profile__avatar-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  visibility: hidden;
+  /*todo finish avatar btn styles*/
+  
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
 }
 
 .profile__avatar {
-  margin-right: 20px;
   border-radius: 8px;
   height: 190px;
   width: 190px;
@@ -36,7 +61,7 @@
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.4;
   color: #212121;
   opacity: 70%;
   display: -webkit-box;
@@ -101,6 +126,15 @@
     align-items: center;
     text-align: center;
     padding-top: 20px;
+  }
+
+  .profile__avatar-btn {
+    visibility: visible;
+  }
+
+  .profile__avatar-btn::after {
+    content: "";
+    /* todo finish moble avatar btn styles*/
   }
 
   .profile__avatar {
