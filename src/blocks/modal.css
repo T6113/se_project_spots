@@ -282,6 +282,7 @@
     font-size: 20px;
     line-height: 120%;
     text-align: center;
+    font-weight: 500;
   }
 
   .modal__input {
