@@ -21,6 +21,8 @@ This project is an image gallery, made so all the elements are responsive and di
 - Media Queries
 - Flexbox
 - JavaScript
+- API'S
+- front-end / Back-end Engineering
 - Form Validation
 
 ## Deployment
