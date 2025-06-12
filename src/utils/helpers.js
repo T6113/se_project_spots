@@ -1,7 +1,12 @@
-export function setButtonText(btn, isLoading, Text) {
+export function renderLoading(
+  button,
+  isLoading,
+  buttonText = "Save",
+  loadingText = "Saving..."
+) {
   if (isLoading) {
-    btn.textContent = Text;
+    button.textContent = loadingText;
   } else {
-    btn.textContent = Text;
+    button.textContent = buttonText;
   }
 }

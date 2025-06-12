@@ -5,7 +5,7 @@ import {
   disabledSubmitButton,
 } from "./validation.js";
 import { settings } from "../utils/constants.js";
-import { setButtonText } from "../utils/helpers.js";
+import { renderLoading } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
 const initialCards = [
@@ -48,8 +48,6 @@ const api = new Api({
   },
 });
 
-console.log("Starting to fetch cards...");
-fetch("https://jsonplaceholder.typicode.com/posts");
 api
   .getAppInfo()
   .then(([cards, userInfo]) => {
@@ -201,7 +199,7 @@ previewModalCloseBtn.addEventListener("click", function () {
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  setButtonText(btn, true, "saving...");
+  renderLoading(btn, true);
   api
     .editUserInfo({
       name: editProfileNameInput.value,
@@ -214,7 +212,7 @@ function handleEditProfileSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(btn, false, "save");
+      renderLoading(btn, false);
     });
 }
 
@@ -223,26 +221,26 @@ function handleEditProfileSubmit(evt) {
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  setButtonText(btn, true, "saving...");
+  renderLoading(btn, true);
   api
     .PostCards(newPostCaptionInput.value, newPostImageInput.value)
     .then((data) => {
       const cardElement = getCardElement(data);
-      cardsList.append(cardElement);
+      cardsList.prepend(cardElement);
       newPostForm.reset();
       disabledSubmitButton(newPostSubmitBtn, settings);
       closeModal(newPostModal);
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(btn, false, "save");
+      renderLoading(btn, false);
     });
 }
 
 function handleAvatarSubmit(avatarEl, evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  setButtonText(btn, true, "saving...");
+  setButtonText(btn, true);
   api
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
@@ -254,7 +252,7 @@ function handleAvatarSubmit(avatarEl, evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(btn, false, "save");
+      setButtonText(btn, false);
     });
 }
 

@@ -257,6 +257,11 @@
   width: fit-content;
 }
 
+.modal__footer {
+  display: flex;
+  gap: 20px;
+}
+
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
@@ -264,12 +269,9 @@
   }
 
   .modal__container--confirmation-delete {
-    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 22px 24px 12px;
   }
 
   .modal__title {
@@ -320,5 +322,10 @@
   .modal__form--confirm-delete .modal__submit-btn_cancel,
   .modal__form--confirm-delete .modal__submit-btn_delete {
     max-width: 156px;
+  }
+
+  .modal__footer {
+    flex-direction: column;
+    gap: 12px;
   }
 }
