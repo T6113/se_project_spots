@@ -5,7 +5,7 @@ import {
   disabledSubmitButton,
 } from "./validation.js";
 import { settings } from "../utils/constants.js";
-import { renderLoading } from "../utils/helpers.js";
+import { ren, renderLoadingderLoading } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
 const initialCards = [
@@ -240,7 +240,7 @@ function handleNewPostSubmit(evt) {
 function handleAvatarSubmit(avatarEl, evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  setButtonText(btn, true);
+  renderLoading(btn, true);
   api
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
@@ -252,14 +252,14 @@ function handleAvatarSubmit(avatarEl, evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(btn, false);
+      renderLoading(btn, false);
     });
 }
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  setButtonText(btn, true, "Deleting...");
+  renderLoading(btn, true, "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
@@ -268,7 +268,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(btn, false, "Delete");
+      renderLoading(btn, false, "Delete");
     });
 }
 
