@@ -9,6 +9,5 @@ export function renderLoading(
     button.textContent = loadingText;
   } else {
     button.textContent = button.dataset.originalText || buttonText;
-    button.textContent = buttonText;
   }
 }

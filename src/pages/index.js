@@ -5,7 +5,7 @@ import {
   disabledSubmitButton,
 } from "./validation.js";
 import { settings } from "../utils/constants.js";
-import { ren, renderLoadingderLoading } from "../utils/helpers.js";
+import { renderLoading } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
 const initialCards = [
@@ -259,7 +259,7 @@ function handleAvatarSubmit(avatarEl, evt) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const btn = evt.submitter;
-  renderLoading(btn, true, "Deleting...");
+  renderLoading(btn, true, "Delete");
   api
     .deleteCard(selectedCardId)
     .then(() => {
