@@ -27,6 +27,6 @@ This project is an image gallery, made so all the elements are responsive and di
 
 ## Deployment
 
-This webpage is deployed to the Github Pages. Here's the LINK: https://t6113.github.io/se_project_spots/
+This webpage is deployed to the Github Pages. Here's the LINK: [https://t6113.github.io/se_project_spots/](http://localhost:8080/)
 
 Dive into my "Sprint 3" final project: https://drive.google.com/file/d/1ZfzjlIPIC0FFf-79QqQlVlvMPuAUie9y/view?usp=sharing
